@@ -1,11 +1,11 @@
-import React from React;
+import React from 'react';
 
-const card =(props) => {
+const Card =(props) => {
     return(
         <div>
-            <h1> first-name, last-name</h1>
-            <p>Age: </p>
-            <p>Hair Color: </p>
+            <h1> {props.lastName}, {props.firstName}</h1>
+            <p>Age:{props.age} </p>
+            <p>Hair Color:{props.hairColor} </p>
         </div>
     )
     }
