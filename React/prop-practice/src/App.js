@@ -1,11 +1,11 @@
 import './App.css';
-import Card from './components/PersonCard'
+import Card from './components/PersonCard';
 
 function App() {
   return (
     <div className="App">
-      <PersonCard  
-      fullName = {'Doe,John'}
+      <Card  
+      lastName = {'Doe'}  firstName = {'John'}
       age={20}
       hairColor= {'Light Brown'}
       />

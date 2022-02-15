@@ -8,4 +8,6 @@ const Card =(props) => {
             <p>Hair Color:{props.hairColor} </p>
         </div>
     )
-    }
+    };
+
+export default Card;
