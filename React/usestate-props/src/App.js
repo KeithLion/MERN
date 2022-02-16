@@ -11,8 +11,8 @@ function App() {
       hairColor= {'Light Brown'}
       />
       <Card  
-      lastName = {'Doe'}  firstName = {'John'}
-      age={ 20 }
+      lastName = {'Smith'}  firstName = {'Anton'}
+      age={ 45 }
       hairColor= {'Light Brown'}
       />
     </div>
