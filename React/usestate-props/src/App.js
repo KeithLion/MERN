@@ -10,6 +10,11 @@ function App() {
       age={ 20 }
       hairColor= {'Light Brown'}
       />
+      <Card  
+      lastName = {'Doe'}  firstName = {'John'}
+      age={ 20 }
+      hairColor= {'Light Brown'}
+      />
     </div>
   );
 }
