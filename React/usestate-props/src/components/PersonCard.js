@@ -8,8 +8,8 @@ const Card =(props) => {
             <h1> {props.lastName}, {props.firstName}</h1>
             <p>Age: { age } </p>
             <p>Hair Color: { props.hairColor } </p>
-            <button onClick = {handleClick}> Birthday button for {props.firstName}
-
+            <button onClick = {handleClick}> 
+            Birthday button for {props.firstName}
             </button>
         </div>
     )
