@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 const Display = (props) =>{
-    const {pokemonList,setPokemonList} = useState([]);
+    const [pokemonList,setPokemonList] = useState([]);
     useEffect(()=> {
         axios.get('https://pokeapi.co/api/v2/pokemon?limit=807')
         // console.log(response.data.results)
