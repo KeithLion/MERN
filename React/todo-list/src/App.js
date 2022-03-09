@@ -2,11 +2,12 @@ import React,{useState} from 'react'
 import './App.css';
 
 function App() {
-  const {newTask,setNewTask} = useState('')
-  const {task,setTask} = useState([])
+  const [newTask,setNewTask] = useState('')
+  const [task,setTask] = useState([])
   const handleNewTask = (e)=>{
     e.preventDefault()
     console.log(newTask)
+    setTask([...task, newTask])
   };
   return (
     <div>
@@ -17,6 +18,8 @@ function App() {
 
       <input 
       onChange={(e) => {
+        console.log(e)
+        console.log(e.target)
         setNewTask(e.target.value);
       }}
       type='text'
