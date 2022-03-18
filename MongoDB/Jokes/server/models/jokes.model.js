@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 
 const jokeSchema = mongoose.Schema({
-    name: {
-        type:String
+    setup: String,
+    punchline:String
     },
-    age: {
-        type: Number
-    }
-});
+    {timestamps:true}
+);
 
 const Joke = mongoose.model('Joke',jokeSchema)
 module.export = Joke 
