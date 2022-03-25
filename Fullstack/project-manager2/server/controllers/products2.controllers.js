@@ -1,4 +1,4 @@
-const Product = require('../models/products.models')
+const Product = require('../models/products1.models')
 
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
             .catch((err)=> console.log(err))
     },
     getOneProduct: (req,res) =>{
-        Product.findOne({id:req.params.id})
+        Product.findOne({_id:req.params.id})
             .then((oneProduct)=>res.json(oneProduct))
             .catch((err)=>console.log(err))
     },

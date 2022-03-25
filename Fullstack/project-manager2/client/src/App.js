@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import UpdateProduct from './components/updateProduct';
+import OneProduct from './components/oneProduct';
+import Main from './views/Main';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
-function App() {
+
+const App=()=> {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <Routes>
+        <Route element={<Main/>} path ='/' default/>
+        <Route element={<UpdateProduct />} path ='/products1/update/:id' />
+        <Route element={<OneProduct />} path ='/products1/:id' />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
