@@ -22,7 +22,7 @@ module.exports = {
             .catch((err)=>console.log(err))
     },
         deleteOneProduct: (req,res) =>{
-        Product.deleteOne({id:req.params.id})
+        Product.deleteOne({_id:req.params.id})
             .then((deleteProduct)=>res.json(deleteProduct))
             .catch((err)=>console.log(err))
     },

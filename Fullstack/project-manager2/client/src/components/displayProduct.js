@@ -1,12 +1,20 @@
-import React, { useState,useEffect} from 'react'
+import React, { useEffect} from 'react'
 import axios from 'axios'
-import {Link, useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const DisplayProduct= (props) => {
 
-    const navigate = useNavigate()
 
-    const {productList,setProductList} = props;
+
+    const {removeFromDom,productList,setProductList} = props;
+
+    const deleteProduct = (productId) =>{
+        axios.delete(`http://localhost:8000/api/products1/` + productId)
+            .then((res)=>{
+                removeFromDom(productId)
+            })
+            .catch(err=> console.log(err))
+    }
 
     useEffect(()=> {
         axios.get('http://localhost:8000/api/products1')
@@ -28,6 +36,7 @@ return(
                 <div key= {index}>
                     <Link to={`/products1/${products1._id}`}>{products1.title}</Link>
                     <Link to={`/products1/update/${products1._id}`}>Edit</Link>
+                    <button onClick={(e)=>{deleteProduct(products1._id)}}>Delete</button>
                 </div>
             ))
         }
