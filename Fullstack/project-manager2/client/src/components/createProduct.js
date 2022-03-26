@@ -31,23 +31,28 @@ return(
         Project Manager 
         </header>
         <form onSubmit={submitHandler}>
+            <p>
+
             <label>Title</label>
             <input onChange={(e)=> setTitle(e.target.value)}
             value={title}
             name='title'
             type='text'/>
-
+            </p>
+            <p>
             <label>Price</label>
             <input onChange={(e)=> setPrice(e.target.value)}
             value={price}
             name='price'
             type='number'/>
-
+            </p>
+            <p>
             <label>Description</label>
             <input onChange={(e)=> setDescription(e.target.value)}
             value={description}
             name='description'
             type='text'/>
+            </p>
 
 
     <button>Create Products</button>
