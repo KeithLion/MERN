@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 const AuthorSchema = new mongoose.Schema({
     firstName:{
-        type:String
+        type:String, required: [true, minLength=2]
     },
     lastName:{
-        type:String
+        type:String, required:[true, minLength=2]
     }
 },{timestamp:true})
 
